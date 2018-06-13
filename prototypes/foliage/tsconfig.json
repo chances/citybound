@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "types": [
+            "babylonjs",
+            "babylonjs-gui",
+            "babylonjs-materials"
+        ],
+    },
+    "include": [
+        "ts/main.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+  <title>Foliage Prototype</title>
+  <script src="https://preview.babylonjs.com/babylon.js"></script>
+  <script src="dist/main.js"></script>
+  <style>
+html,
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+#fpsLabel {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 8px;
+  color: rgb(58, 58, 58);
+  background-color: #ddd;
+  cursor: default;
+}
+  </style>
+</head>
+
+<body>
+  <canvas></canvas>
+  <div id="fpsLabel"></div>
+</body>
+
+</html>

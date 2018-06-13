@@ -1,0 +1,38 @@
+{
+  "name": "foliage-prototype",
+  "version": "1.0.0",
+  "description": "Prototypes for procedural foliage generation in Citybound",
+  "main": "index.js",
+  "dependencies": {
+    "babylonjs": "^3.2.0",
+    "babylonjs-gui": "^3.2.0",
+    "babylonjs-materials": "^3.2.0"
+  },
+  "devDependencies": {
+    "fork-ts-checker-webpack-plugin": "^0.4.2",
+    "ts-loader": "^4.4.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chances/citybound.git"
+  },
+  "keywords": [
+    "citybound",
+    "citybound-mod",
+    "prototype",
+    "babylonjs"
+  ],
+  "author": "Chance Snow <chances@cat.pdx.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chances/citybound/issues"
+  },
+  "homepage": "https://github.com/chances/citybound#readme"
+}
