@@ -98,8 +98,12 @@ export abstract class Node {
     return 1.0 - overwaterFactor
   }
 
-  hydrate() {
-    this._hydration++
+  *iterator(): IterableIterator<Node> {
+    yield *this._iterator(this)
+  }
+
+  hydrate(amount = 1) {
+    this._hydration += amount
   }
 
   storeSugar(amount = 1) {
@@ -142,7 +146,7 @@ export abstract class Node {
     return this._root(node.parent)
   }
 
-  private _depth(node: Node) {
+  private _depth(node: Node): number {
     if (node == null) {
       return 0
     }
@@ -161,6 +165,13 @@ export abstract class Node {
     if (this._children.includes(child)) {
       this._children = this._children.filter(n => n !== child)
       child._parent = null
+    }
+  }
+
+  private *_iterator(node: Node) {
+    yield node
+    for (let i = 0; i < node.children.length; i++) {
+      yield *this._iterator(node.children.raw[i])
     }
   }
 }

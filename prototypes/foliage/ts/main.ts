@@ -3,6 +3,7 @@ import {
   HemisphericLight, Light, MeshBuilder, Scene, ShadowGenerator, StandardMaterial, Vector3,
 } from 'babylonjs'
 
+import { Plant } from './models/foliage'
 import { radians } from './utils'
 
 class Prototype {
@@ -63,6 +64,10 @@ class Prototype {
     sphere.position.y = 1
 
     shadowGenerator.getShadowMap().renderList.push(sphere)
+
+    const plant = new Plant(2, 3, 5, 2, 2, true)
+    plant.grow()
+    plant.hydrate(2)
 
     const groundMaterial = new StandardMaterial('goundMaterial', this._scene)
     groundMaterial.diffuseColor = new Color3(groundColor.r, groundColor.g, groundColor.b)
