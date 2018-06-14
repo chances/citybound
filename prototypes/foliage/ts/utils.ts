@@ -13,3 +13,12 @@ export function radians(deg: number) {
 export function degrees(rad: number) {
   return rad * 180 / Math.PI
 }
+
+/**
+ * Returns a random number between min (inclusive) and max (exclusive)
+ * @param min Minimum value to randomly select from
+ * @param max Maximum value to randomly select from (exclusive)
+ */
+export function getRandom(min: number, max: number) {
+  return Math.random() * (max - min) + min
+}
