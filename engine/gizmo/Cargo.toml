@@ -1,0 +1,26 @@
+[package]
+name = "gizmo"
+version = "0.1.0"
+authors = ["Chance Snow <git@chancesnow.me>"]
+
+[dependencies.webrender]
+git = "https://github.com/servo/webrender"
+
+[dependencies.kay]
+path = "../kay"
+
+[dependencies.compact]
+path = "../compact"
+
+[dependencies.compact_macros]
+path = "../compact_macros"
+
+[dependencies.descartes]
+path = "../descartes"
+features = ["compact_containers"]
+
+[dependencies.monet]
+path = "../monet"
+
+[build-dependencies]
+kay_codegen = {path = "../kay_codegen/"}
