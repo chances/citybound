@@ -48,7 +48,7 @@ impl Gizmo {
         };
 
         let framebuffer_size = {
-            let (width, height) = self.window.get_inner_size().unwrap();
+            let (width, height) = frame.dimensions;
             DeviceUintSize::new(width, height)
         };
         let notifier = Box::new(Notifier::new(self.events_proxy));
@@ -79,10 +79,10 @@ impl Gizmo {
         // Ready for event loop
     }
 
-    fn render(&self) {
+    fn render(&self, &mut frame: ::monet::glium::Frame) {
         let mut txn = Transaction::new();
         let framebuffer_size = {
-            let (width, height) = self.window.get_inner_size().unwrap();
+            let (width, height) = frame.dimensions;
             DeviceUintSize::new(width, height)
         };
 
