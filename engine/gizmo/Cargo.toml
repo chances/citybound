@@ -2,8 +2,12 @@
 name = "gizmo"
 version = "0.1.0"
 authors = ["Chance Snow <git@chancesnow.me>"]
+build = "./src/build.rs"
 
 [dependencies.webrender]
+git = "https://github.com/servo/webrender"
+
+[dependencies.webrender_api]
 git = "https://github.com/servo/webrender"
 
 [dependencies.kay]
@@ -21,6 +25,9 @@ features = ["compact_containers"]
 
 [dependencies.monet]
 path = "../monet"
+
+[dependencies]
+euclid = "0.17.3"
 
 [build-dependencies]
 kay_codegen = {path = "../kay_codegen/"}

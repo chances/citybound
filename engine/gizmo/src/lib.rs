@@ -1,3 +1,13 @@
+extern crate compact;
+#[macro_use]
+extern crate compact_macros;
+extern crate kay;
+extern crate monet;
+extern crate descartes;
+
+extern crate webrender;
+extern crate webrender_api;
+extern crate euclid;
 
 // user_interface/mod.rs parked_frame has the GL context
 
@@ -6,3 +16,5 @@
 
 // https://github.com/servo/webrender/blob/master/examples/common/boilerplate.rs
 // https://github.com/glennw/wr-sample/blob/master/src/main.rs
+
+pub mod webrender_gizmo;
