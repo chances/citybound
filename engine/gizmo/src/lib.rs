@@ -7,7 +7,10 @@ extern crate descartes;
 
 extern crate webrender;
 extern crate webrender_api;
+extern crate winit;
 extern crate euclid;
+
+mod notifier;
 
 // user_interface/mod.rs parked_frame has the GL context
 
